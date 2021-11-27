@@ -2,18 +2,20 @@
   <div>
     <Header></Header>
     <Swiper></Swiper>
-    123
+    <Icons></Icons>
   </div>
 </template>
 
 <script>
 import Header from './page/Header.vue'
 import Swiper from './page/Swiper.vue'
+import Icons from './page/Icons.vue'
 export default {
   name: 'Home',
   components: {
     Header,
-    Swiper
+    Swiper,
+    Icons
   }
 }
 </script>
