@@ -11,6 +11,11 @@ import './assets/font/iconfont.css'
 //js(解决移动端延迟300s)
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
+//swiper插件
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
+Vue.use(Vant);
 
 new Vue({
   router,
