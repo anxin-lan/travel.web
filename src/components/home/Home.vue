@@ -6,6 +6,7 @@
     <Localtion></Localtion>
     <Hot></Hot>
     <Like></Like>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Icons from './page/Icons.vue'
 import Localtion from './page/Localtion.vue'
 import Hot from './page/Hot.vue'
 import Like from './page/Like.vue'
+import Footer from './page/Footer.vue'
 export default {
   name: 'Home',
   components: {
@@ -24,7 +26,8 @@ export default {
     Icons,
     Localtion,
     Hot,
-    Like
+    Like,
+    Footer
   }
 }
 </script>
