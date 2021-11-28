@@ -56,7 +56,7 @@ export default {}
 }
 
 .hot-frist {
-  border-left: 3px solid #ff9d00;
+  border-left: 3px solid #00bcd4;
 }
 
 .hot-title {
