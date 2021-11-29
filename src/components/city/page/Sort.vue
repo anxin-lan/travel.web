@@ -25,6 +25,21 @@
       <li class="hot-item">
         A
       </li>
+      <li class="hot-item">
+        A
+      </li>
+      <li class="hot-item">
+        A
+      </li>
+      <li class="hot-item">
+        A
+      </li>
+      <li class="hot-item">
+        A
+      </li>
+      <li class="hot-item">
+        A
+      </li>
     </ul>
   </div>
 </template>
