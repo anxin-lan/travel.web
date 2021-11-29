@@ -4,48 +4,18 @@
       热门城市
     </div>
     <ul class="hot-list">
-      <li class="hot-item">
-        北京
-      </li>
-      <li class="hot-item">
-        上海
-      </li>
-      <li class="hot-item">
-        三亚
-      </li>
-      <li class="hot-item">
-        香港
-      </li>
-      <li class="hot-item">
-        杭州
-      </li>
-      <li class="hot-item">
-        广州
-      </li>
-      <li class="hot-item">
-        成都
-      </li>
-      <li class="hot-item">
-        深圳
-      </li>
-      <li class="hot-item">
-        苏州
-      </li>
-      <li class="hot-item">
-        桂林
-      </li>
-      <li class="hot-item">
-        西安
-      </li>
-      <li class="hot-item">
-        厦门
+      <li class="hot-item" v-for="item in hotCities" :key="item.id">
+        {{ item.name }}
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'CityHot',
+  props: ['hotCities']
+}
 </script>
 
 <style scoped>

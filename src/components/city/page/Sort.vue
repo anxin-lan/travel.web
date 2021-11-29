@@ -4,48 +4,18 @@
       字母排序
     </div>
     <ul class="hot-list">
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
-      </li>
-      <li class="hot-item">
-        A
+      <li class="hot-item" v-for="(index,item) in cities" :key="item.id">
+        {{ item }}
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'CitySort',
+  props: ['cities']
+}
 </script>
 
 <style scoped>

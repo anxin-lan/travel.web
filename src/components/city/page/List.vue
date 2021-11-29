@@ -1,27 +1,23 @@
 <template>
   <div class="list">
-    <div class="list-title">
-      A
+    <div v-for="(index,item) in cities" :key="item.id">
+      <div class="list-title">
+        {{ item }}
+      </div>
+      <ul class="list-msg">
+        <li class="list-item" v-for="item in index" :key="item.id">
+          {{ item.name }}
+        </li>
+      </ul>
     </div>
-    <ul class="list-msg">
-      <li class="list-item">
-        阿坝藏族羌族自治州
-      </li>
-      <li class="list-item">
-        阿克苏地区
-      </li>
-      <li class="list-item">
-        阿拉尔
-      </li>
-      <li class="list-item">
-        阿拉善盟
-      </li>
-    </ul>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'CityList',
+  props: ['cities']
+}
 </script>
 
 <style scoped lang="stylus">
