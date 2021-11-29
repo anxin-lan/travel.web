@@ -16,7 +16,8 @@ export default {}
 <style scoped>
 .footer {
   width: 100%;
-  height: 12.5rem;
+  height: 7.5rem;
+  max-height: 9.375rem;
   text-align: center;
 }
 .copyright {

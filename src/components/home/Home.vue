@@ -1,12 +1,13 @@
 <template>
   <div>
     <Header></Header>
-    <Swiper></Swiper>
-    <Icons></Icons>
+    <Swiper :swiperList='swiperList'></Swiper>
+    <Icons :iconsList='iconsList'></Icons>
     <Localtion></Localtion>
-    <Hot></Hot>
-    <Like></Like>
+    <Hot :hotList='hotList'></Hot>
+    <Like :contentList='contentList'></Like>
     <Footer></Footer>
+    <Navbar></Navbar>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Localtion from './page/Localtion.vue'
 import Hot from './page/Hot.vue'
 import Like from './page/Like.vue'
 import Footer from './page/Footer.vue'
+import Navbar from '../navbar/Navbar.vue'
 export default {
   name: 'Home',
   components: {
@@ -27,7 +29,25 @@ export default {
     Localtion,
     Hot,
     Like,
-    Footer
+    Footer,
+    Navbar
+  },
+  data() {
+    return {
+      swiperList: [],
+      iconsList: [],
+      hotList: [],
+      contentList: []
+    }
+  },
+  mounted() {
+    this.$http.get('/api/dataHome.json').then(res => {
+      const data = res.data.data[0]
+      this.swiperList = data.swiperList
+      this.iconsList = data.iconsList
+      this.hotList = data.hotList
+      this.contentList = data.contentList
+    })
   }
 }
 </script>

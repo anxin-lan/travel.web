@@ -10,22 +10,24 @@
 
 <script>
 export default {
+  name: 'Swiper',
+  props: ['swiperList'],
   data() {
     return {
-      swiperList: [
-        {
-          id: '01',
-          imgUrl: require('@/assets/images/bg01.jpg')
-        },
-        {
-          id: '02',
-          imgUrl: require('@/assets/images/bg02.jpg')
-        },
-        {
-          id: '03',
-          imgUrl: require('@/assets/images/bg03.jpg')
-        }
-      ]
+      // swiperList: [
+      //   {
+      //     id: '01',
+      //     imgUrl: require('@/assets/images/bg01.jpg')
+      //   },
+      //   {
+      //     id: '02',
+      //     imgUrl: require('@/assets/images/bg02.jpg')
+      //   },
+      //   {
+      //     id: '03',
+      //     imgUrl: require('@/assets/images/bg03.jpg')
+      //   }
+      // ]
     }
   }
 }

@@ -12,50 +12,51 @@
 <script>
 export default {
   name: 'Home',
+  props: ['iconsList'],
   data() {
     return {
-      iconsList: [
-        {
-          id: '01',
-          iconsURL: require('@/assets/icons/icon01.png'),
-          title: '找攻略'
-        },
-        {
-          id: '01',
-          iconsURL: require('@/assets/icons/icon02.png'),
-          title: '看游记'
-        },
-        {
-          id: '01',
-          iconsURL: require('@/assets/icons/icon03.png'),
-          title: '问达人'
-        },
-        {
-          id: '01',
-          iconsURL: require('@/assets/icons/icon04.png'),
-          title: '头脑学园'
-        },
-        {
-          id: '01',
-          iconsURL: require('@/assets/icons/icon05.png'),
-          title: '酒店'
-        },
-        {
-          id: '01',
-          iconsURL: require('@/assets/icons/icon06.png'),
-          title: '去旅行'
-        },
-        {
-          id: '01',
-          iconsURL: require('@/assets/icons/icon07.png'),
-          title: '机票'
-        },
-        {
-          id: '01',
-          iconsURL: require('@/assets/icons/icon08.png'),
-          title: '当地玩乐'
-        }
-      ]
+      // iconsList: [
+      //   {
+      //     id: '01',
+      //     iconsURL: require('@/assets/icons/icon01.png'),
+      //     title: '找攻略'
+      //   },
+      //   {
+      //     id: '01',
+      //     iconsURL: require('@/assets/icons/icon02.png'),
+      //     title: '看游记'
+      //   },
+      //   {
+      //     id: '01',
+      //     iconsURL: require('@/assets/icons/icon03.png'),
+      //     title: '问达人'
+      //   },
+      //   {
+      //     id: '01',
+      //     iconsURL: require('@/assets/icons/icon04.png'),
+      //     title: '头脑学园'
+      //   },
+      //   {
+      //     id: '01',
+      //     iconsURL: require('@/assets/icons/icon05.png'),
+      //     title: '酒店'
+      //   },
+      //   {
+      //     id: '01',
+      //     iconsURL: require('@/assets/icons/icon06.png'),
+      //     title: '去旅行'
+      //   },
+      //   {
+      //     id: '01',
+      //     iconsURL: require('@/assets/icons/icon07.png'),
+      //     title: '机票'
+      //   },
+      //   {
+      //     id: '01',
+      //     iconsURL: require('@/assets/icons/icon08.png'),
+      //     title: '当地玩乐'
+      //   }
+      // ]
     }
   }
 }

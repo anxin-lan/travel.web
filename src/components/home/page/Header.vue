@@ -8,7 +8,9 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-right">
-      北京
+      <router-link to="/city">
+        北京
+      </router-link>
       <span class="iconfont">&#xe600;</span>
     </div>
   </div>
@@ -54,5 +56,9 @@ export default {}
   padding-left: 0.3125rem;
   font-size: 0.875rem;
   color: $textColor;
+}
+
+.header-right a {
+  color: #fff;
 }
 </style>
