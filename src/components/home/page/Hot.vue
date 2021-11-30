@@ -4,16 +4,18 @@
       <span class="hot-frist">本周热门榜单</span>
       <span class="hot-title">全部榜单 &gt;</span>
     </div>
-    <van-grid :border="false" :column-num="2" :gutter="8" v->
-      <van-grid-item v-for="item in hotList" :key="item.index">
-        <van-image :src="item.imgURL" />
-        <div class="imgtext">
+    <!-- 本周热门榜单 -->
+    <div class="hot-frist-list">
+      <ul>
+        <li class="imgtext" v-for="item in hotList" :key="item.index">
+          <img :src="item.imgURL" alt="">
           <div class="title"> {{ item.titleName }}</div>
           <div class="detail">{{ item.titleDetail }}</div>
           <span class="price">{{ item.price }}</span>
-        </div>
-      </van-grid-item>
-    </van-grid>
+        </li>
+      </ul>
+    </div>
+
     <div class="btn"><span>更多特惠门票</span> <em>&gt;</em></div>
   </div>
 </template>
@@ -61,6 +63,28 @@ export default {
 <style scoped lang="stylus">
 @import '~@/assets/css/common.styl';
 
+.hot-frist-list {
+  height: 23.75rem;
+  max-height: 28.125rem;
+  margin-left: 5%;
+  margin-top: 1.125rem;
+}
+
+.hot-frist-list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hot-frist-list ul li {
+  flex: 1;
+  margin-top: 0.625rem;
+}
+
+.hot-frist-list ul li img {
+  width: 10rem;
+  border-radius: 0.3125rem;
+}
+
 .hot-top {
   height: 2.75rem;
   line-height: 2.75rem;
@@ -88,7 +112,7 @@ export default {
 }
 
 .title {
-  padding-top: 0.625rem;
+  padding-top: 0.3125rem;
   font-size: 0.9375rem;
   color: #000;
 }
@@ -96,12 +120,10 @@ export default {
 .detail {
   padding-top: 0.3125rem;
   font-size: 0.875rem;
-  float: left;
   color: #888;
 }
 
 .price {
-  display: inline-block;
   font-size: 1.25rem;
   padding-top: 0.3125rem;
   color: #ff7400;

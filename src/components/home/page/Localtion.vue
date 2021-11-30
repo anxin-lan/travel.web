@@ -21,7 +21,6 @@ export default {}
   width: 100%;
   height: 2.75rem;
   line-height: 2.75rem;
-  /* background-color: red; */
   text-align: center;
   border-bottom: 10px solid #e0e0e0;
 }
