@@ -18,14 +18,14 @@
           字母排序
         </div>
         <ul class="sort-list">
-          <li class="sort-item" v-for="(index,item) in cities" :key="item.id">
+          <li class="sort-item" v-for="(index,item) in cities" :key="item.id" @click="changeSort(item)">
             {{ item }}
           </li>
         </ul>
       </div>
       <!-- List -->
       <div class="list">
-        <div v-for="(index,item) in cities" :key="item.id">
+        <div v-for="(index,item) in cities" :key="item.id" :ref="item">
           <div class="list-title">
             {{ item }}
           </div>
@@ -54,6 +54,13 @@ export default {
   mounted() {
     let container = this.$refs['container']
     this.scroll = new BScroll(container)
+  },
+  methods: {
+    changeSort(sortName) {
+      // console.log(sortName)
+      // console.log(this.$refs[sortName][0])
+      this.scroll.scrollToElement(this.$refs[sortName][0])
+    }
   }
 }
 </script>
