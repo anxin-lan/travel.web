@@ -18,8 +18,11 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 
 Vue.use(Vant);
+//vuex
+import store from './store'
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
