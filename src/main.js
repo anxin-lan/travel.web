@@ -13,11 +13,16 @@ import './assets/font/iconfont.css'
 //js(解决移动端延迟300s)
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
-//swiper插件
+//vant插件
 import Vant from 'vant';
 import 'vant/lib/index.css';
 
 Vue.use(Vant);
+
+//swiper组件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 //vuex
 import store from './store'
 

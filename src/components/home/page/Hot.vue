@@ -7,7 +7,7 @@
     <!-- 本周热门榜单 -->
     <div class="hot-frist-list">
       <ul>
-        <li class="imgtext" v-for="item in hotList" :key="item.index">
+        <li class="imgtext" v-for="item in hotList" :key="item.index" @click="toDetail">
           <img :src="item.imgURL" alt="">
           <div class="title"> {{ item.titleName }}</div>
           <div class="detail">{{ item.titleDetail }}</div>
@@ -24,37 +24,11 @@ export default {
   name: 'Hot',
   props: ['hotList'],
   data() {
-    return {
-      // hotList: [
-      //   {
-      //     id: '01',
-      //     imgURL: '//img1.qunarzz.com/sight/p0/1411/61/d92ba6a30aa12eb0a9a4a9c82214cb8e.water.jpg_256x160_f46ee4c5.jpg',
-      //     titleName: '秦始皇帝陵博物院',
-      //     titleDetail: '秦始皇的地下御林军',
-      //     price: '¥120'
-      //   },
-      //   {
-      //     id: '02',
-      //     imgURL: '//img1.qunarzz.com/sight/p0/1508/c5/a017645d82ab89f271fdfb1bd6ecc2e0.water.jpg_256x160_39af85ce.jpg',
-      //     titleName: '秦岭野生动物园',
-      //     titleDetail: '观看放养的各类猛兽',
-      //     price: '¥100'
-      //   },
-      //   {
-      //     id: '03',
-      //     imgURL: '//img1.qunarzz.com/sight/p0/1602/de/de8400021b664c5390.img.jpg_256x160_c047d903.jpg',
-      //     titleName: '华清宫',
-      //     titleDetail: '唐玄宗和杨贵妃的共浴地',
-      //     price: '¥120'
-      //   },
-      //   {
-      //     id: '04',
-      //     imgURL: '//img1.qunarzz.com/sight/p0/1504/59/594e60a1366e1741.water.jpg_256x160_28de21eb.jpg',
-      //     titleName: '华山景区',
-      //     titleDetail: "'以'奇险出名的五岳之一",
-      //     price: '¥100'
-      //   }
-      // ]
+    return {}
+  },
+  methods: {
+    toDetail() {
+      this.$router.push('/detail')
     }
   }
 }
