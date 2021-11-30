@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Header from './page/Header.vue'
 import Swiper from './page/Swiper.vue'
 import Icons from './page/Icons.vue'
@@ -37,17 +38,37 @@ export default {
       swiperList: [],
       iconsList: [],
       hotList: [],
-      contentList: []
+      contentList: [],
+      changeCity: ''
+    }
+  },
+  computed: {
+    ...mapState(['city'])
+  },
+  methods: {
+    getHttp() {
+      this.$http.get('/api/dataHome.json').then(res => {
+        const data = res.data.data
+        data.forEach((item, index) => {
+          if (item.city == this.city) {
+            this.swiperList = item.swiperList
+            this.iconsList = item.iconsList
+            this.hotList = item.hotList
+            this.contentList = item.contentList
+          }
+        })
+      })
     }
   },
   mounted() {
-    this.$http.get('/api/dataHome.json').then(res => {
-      const data = res.data.data[0]
-      this.swiperList = data.swiperList
-      this.iconsList = data.iconsList
-      this.hotList = data.hotList
-      this.contentList = data.contentList
-    })
+    this.changeCity = this.city
+    this.getHttp()
+  },
+  activated() {
+    if (this.changeCity != this.city) {
+      this.getHttp()
+      this.changeCity = this.city
+    }
   }
 }
 </script>
