@@ -1,23 +1,18 @@
 <template>
   <div class="city">
     <city-header></city-header>
-    <city-hot :hotCities='hotCities'></city-hot>
-    <city-sort :cities='cities'></city-sort>
-    <city-list :cities='cities'></city-list>
+
+    <city-list :cities='cities' :hotCities='hotCities'></city-list>
   </div>
 </template>
 
 <script>
 import CityHeader from '@/components/city/page/Header.vue'
-import CityHot from '@/components/city/page/Hot.vue'
-import CitySort from '@/components/city/page/Sort.vue'
 import CityList from '@/components/city/page/List.vue'
 export default {
   name: 'City',
   components: {
     CityHeader,
-    CityHot,
-    CitySort,
     CityList
   },
   data() {
