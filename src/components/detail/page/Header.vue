@@ -1,25 +1,14 @@
 <template>
-  <div class="banner">
-    <div @click="showSwiper">
-      <div class="banner-img">
-        <img src="/api/detailImages/d1.jpg" alt="">
+  <div class="header">
+    <div class="header-return" @click="goBack" v-show="showHeader">&lt;</div>
+
+    <div class="header-top" v-show="!showHeader" :style="styleOpacity">
+      <div class="header-left">
+        <span class="iconfont">&#xe660;</span>
       </div>
-      <div class="banner-title">
-        秦始皇帝陵博物院（兵马俑）(AAAAA景区)
-      </div>
+      秦始皇帝陵博物院（兵马俑）
     </div>
-    <div class="img-swiper" v-show="imgSwiper" @click="hideSwiper">
-      <!-- <img src="/api/detailImages/d1.jpg" alt=""> -->
 
-      <swiper :options="swiperOption">
-
-        <swiper-slide v-for='item in bannerList' :key='item.id'>
-          <img :src="item.imgURL">
-        </swiper-slide>
-
-      </swiper>
-      <div class="swiper-pagination" slot="pagination"></div>
-    </div>
   </div>
 </template>
 
@@ -28,101 +17,69 @@ export default {
   name: 'Header',
   data() {
     return {
-      swiperOption: {
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction'
-        }
-      },
-      bannerList: [
-        {
-          id: '01',
-          imgURL: '/api/detailImages/d1.jpg'
-        },
-        {
-          id: '02',
-          imgURL: '/api/detailImages/t1.jpg'
-        },
-        {
-          id: '03',
-          imgURL: '/api/detailImages/t2.jpg'
-        },
-        {
-          id: '04',
-          imgURL: '/api/detailImages/t3.jpg'
-        },
-        {
-          id: '05',
-          imgURL: '/api/detailImages/t4.jpg'
-        },
-        {
-          id: '06',
-          imgURL: '/api/detailImages/t5.jpg'
-        },
-        {
-          id: '07',
-          imgURL: '/api/detailImages/t6.jpg'
-        }
-      ],
-      imgSwiper: false
+      showHeader: true,
+      styleOpacity: {
+        opacity: 0
+      }
     }
   },
   methods: {
-    showSwiper() {
-      this.imgSwiper = true
-    },
-    hideSwiper() {
-      this.imgSwiper = false
+    goBack() {
+      this.$router.push('/')
     }
+  },
+  mounted() {
+    let that = this
+    window.addEventListener('scroll', function () {
+      // console.log(document.documentElement.scrollTop)
+      let top = document.documentElement.scrollTop
+      if (top > 45) {
+        let opacity = top / 130
+        opacity = opacity > 1 ? 1 : opacity
+        that.styleOpacity = { opacity }
+        that.showHeader = false
+      } else {
+        that.showHeader = true
+      }
+    })
   }
 }
 </script>
-<style scoped>
-.banner {
-  position: relative;
-}
-.banner-img {
-  width: 100%;
-  overflow: hidden;
-  height: 0;
-  padding-bottom: 55%;
-}
-.banner-img img {
-  width: 100%;
-}
 
-.banner-title {
+<style scoped lang="stylus">
+@import '~@/assets/css/var.styl';
+
+.header-return {
   position: absolute;
-  bottom: 0.9375rem;
-  left: 0.9375rem;
-  font-size: 1.125rem;
-  color: #fff;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 70%);
-}
-
-.img-swiper {
-  position: fixed;
+  top: 0.9375rem;
+  left: 0.625rem;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
   background-color: #000;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.img-swiper img {
-  width: 100%;
-  height: 16.25rem;
+  border-radius: 50%;
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.25rem;
+  text-align: center;
 }
 
-.swiper-pagination,
-.swiper-pagination-bullets {
-  position: absolute;
-  bottom: 0.625rem;
-}
-.swiper-pagination,
-.swiper-pagination-fraction {
+.header-top {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  line-height: 2.75rem;
   color: #fff;
-  font-size: 1.25rem;
+  z-index: 99;
+  background: $bgColor;
+}
+
+.header-left {
+  position: absolute;
+  width: 1.875rem;
+  text-align: center;
+  color: $textColor;
+  font-weight: 700;
 }
 </style>
