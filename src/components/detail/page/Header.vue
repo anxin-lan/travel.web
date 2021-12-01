@@ -3,7 +3,7 @@
     <div class="header-return" @click="goBack" v-show="showHeader">&lt;</div>
 
     <div class="header-top" v-show="!showHeader" :style="styleOpacity">
-      <div class="header-left">
+      <div class="header-left" @click="goBack">
         <span class="iconfont">&#xe660;</span>
       </div>
       秦始皇帝陵博物院（兵马俑）
