@@ -11,9 +11,24 @@
 <script>
 export default {
   name: 'Swiper',
-  props: ['swiperList'],
+  // props: ['swiperList'],
   data() {
-    return {}
+    return {
+      swiperList: [
+        {
+          id: '01',
+          imgUrl: '../mock/images/bg01.jpg'
+        },
+        {
+          id: '02',
+          imgUrl: '../mock/images/bg02.jpg'
+        },
+        {
+          id: '03',
+          imgUrl: '/api/images/bg03.jpg'
+        }
+      ]
+    }
   }
 }
 </script>

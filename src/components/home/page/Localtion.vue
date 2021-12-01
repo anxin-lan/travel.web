@@ -12,7 +12,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Location'
+}
 </script>
 
 <style scoped>

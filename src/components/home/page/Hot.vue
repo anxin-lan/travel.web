@@ -22,9 +22,41 @@
 <script>
 export default {
   name: 'Hot',
-  props: ['hotList'],
+  // props: ['hotList'],
   data() {
-    return {}
+    return {
+      name: 'Hot',
+      hotList: [
+        {
+          id: '01',
+          imgURL: '/api/images/hot01.jpg',
+          titleName: '秦始皇帝陵博物院',
+          titleDetail: '秦始皇的地下御林军',
+          price: '¥120'
+        },
+        {
+          id: '02',
+          imgURL: '/api/images/hot02.jpg',
+          titleName: '秦岭野生动物园',
+          titleDetail: '观看放养的各类猛兽',
+          price: '¥100'
+        },
+        {
+          id: '03',
+          imgURL: '/api/images/hot03.jpg',
+          titleName: '华清宫',
+          titleDetail: '唐玄宗和杨贵妃的共浴地',
+          price: '¥120'
+        },
+        {
+          id: '04',
+          imgURL: '/api/images/hot04.jpg',
+          titleName: '华山景区',
+          titleDetail: "'以'奇险出名的五岳之一",
+          price: '¥100'
+        }
+      ]
+    }
   },
   methods: {
     toDetail() {

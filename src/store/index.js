@@ -7,7 +7,7 @@ Vue.use(Vuex)
 let defaultCity = "上海"
 defaultCity = localStorage.city
 const state = {
-  city: defaultCity
+  city: "西安"
 }
 
 
