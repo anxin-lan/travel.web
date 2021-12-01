@@ -1,19 +1,18 @@
 # travel
-
-## Project setup
-```
+## 介绍
+基于Vue开发的旅游移动项目，其中用到了Vant、Swiper、stylus等插件。
+## 下载安装
+git clone https://gitee.com/pulsar-lan/travel.git
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 项目运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 项目打包
 ```
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
