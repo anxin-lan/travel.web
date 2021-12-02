@@ -44,7 +44,7 @@
             <span>自营</span> <span>随时退</span> <span>无需换票</span>
           </div>
           <div class="recommend-price">
-            <span><em>¥</em>60</span>
+            <span><em>¥</em>81</span>
             <div class="btn">立即预定</div>
           </div>
         </li>
