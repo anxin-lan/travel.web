@@ -29,28 +29,28 @@ export default {
       hotList: [
         {
           id: '01',
-          imgURL: '/api/images/hot01.jpg',
+          imgURL: 'https://img0.baidu.com/it/u=1411955872,2956584459&fm=26&fmt=auto',
           titleName: '秦始皇帝陵博物院',
           titleDetail: '秦始皇的地下御林军',
           price: '¥120'
         },
         {
           id: '02',
-          imgURL: '/api/images/hot02.jpg',
+          imgURL: 'https://img1.baidu.com/it/u=3267974406,944226451&fm=26&fmt=auto',
           titleName: '秦岭野生动物园',
           titleDetail: '观看放养的各类猛兽',
           price: '¥100'
         },
         {
           id: '03',
-          imgURL: '/api/images/hot03.jpg',
+          imgURL: 'https://img0.baidu.com/it/u=2434746275,166773544&fm=26&fmt=auto',
           titleName: '华清宫',
           titleDetail: '唐玄宗和杨贵妃的共浴地',
           price: '¥120'
         },
         {
           id: '04',
-          imgURL: '/api/images/hot04.jpg',
+          imgURL: 'https://img2.baidu.com/it/u=3128481101,1624000683&fm=26&fmt=auto',
           titleName: '华山景区',
           titleDetail: "'以'奇险出名的五岳之一",
           price: '¥100'
@@ -70,7 +70,7 @@ export default {
 @import '~@/assets/css/common.styl';
 
 .hot-frist-list {
-  height: 23.75rem;
+  height: 25rem;
   max-height: 28.125rem;
   margin-left: 5%;
   margin-top: 1.125rem;
@@ -88,6 +88,7 @@ export default {
 
 .hot-frist-list ul li img {
   width: 10rem;
+  height: 6.875rem;
   border-radius: 0.3125rem;
 }
 

@@ -17,15 +17,15 @@ export default {
       swiperList: [
         {
           id: '01',
-          imgUrl: '../mock/images/bg01.jpg'
+          imgUrl: 'https://img0.baidu.com/it/u=1950571386,3752692805&fm=26&fmt=auto'
         },
         {
           id: '02',
-          imgUrl: '../mock/images/bg02.jpg'
+          imgUrl: 'https://img0.baidu.com/it/u=1785378616,248684041&fm=253&fmt=auto&app=120&f=JPEG?w=750&h=500'
         },
         {
           id: '03',
-          imgUrl: '/api/images/bg03.jpg'
+          imgUrl: 'https://img1.baidu.com/it/u=280602846,1233495361&fm=26&fmt=auto'
         }
       ]
     }
